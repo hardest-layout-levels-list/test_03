@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>GD List</title>
+<title>GD Topbar</title>
 
 <style>
 body {
@@ -10,14 +10,16 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Topbar */
+/* Topbar container */
 .topbar {
-    background: red;
+    background-color: red;
     display: flex;
+    align-items: center;
     padding: 0;
+    height: 50px;
 }
 
-/* Buttons */
+/* Dropdown buttons */
 .dropdown {
     position: relative;
 }
@@ -35,13 +37,16 @@ body {
     background: darkred;
 }
 
-/* Dropdown menu */
+/* Dropdown content */
 .dropdown-content {
     display: none;
     position: absolute;
     background: white;
     min-width: 160px;
+    top: 50px; /* make it appear below the topbar */
+    left: 0;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
 }
 
 .dropdown-content a {
@@ -55,6 +60,7 @@ body {
     background: #eee;
 }
 
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -76,11 +82,11 @@ body {
 }
 </style>
 </head>
-
 <body>
 
 <div class="topbar">
 
+    <!-- Lists dropdown -->
     <div class="dropdown">
         <button class="dropbtn">Lists</button>
         <div class="dropdown-content">
@@ -90,6 +96,7 @@ body {
         </div>
     </div>
 
+    <!-- Player Section dropdown -->
     <div class="dropdown">
         <button class="dropbtn">Player Section</button>
         <div class="dropdown-content">
@@ -98,6 +105,7 @@ body {
         </div>
     </div>
 
+    <!-- Right side links -->
     <div class="right-links">
         <a href="https://forms.google.com" target="_blank">Submit Record</a>
         <a href="https://discord.com" target="_blank">Discord</a>
