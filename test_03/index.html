@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GD List Page</title>
+<style>
+/* Add some demo page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.content {
+    padding: 20px;
+    min-height: 1500px; /* so you can scroll */
+    background: linear-gradient(white, lightgray);
+}
+</style>
+</head>
+<body>
+
+<!-- Topbar placeholder -->
+<div id="topbar-placeholder"></div>
+
+<!-- Page content -->
+<div class="content">
+    <h1>Geometry Dash List Page</h1>
+    <p>Scroll down to see the sticky topbar in action.</p>
+    <p>More content here…</p>
+</div>
+
+<!-- Script to render topbar -->
+<script>
+fetch('render_topbar_and_contents.html')
+  .then(response => response.text())
+  .then(html => {
+      document.getElementById('topbar-placeholder').innerHTML = html;
+  })
+  .catch(err => console.error('Error loading topbar:', err));
+</script>
+
+</body>
+</html>
