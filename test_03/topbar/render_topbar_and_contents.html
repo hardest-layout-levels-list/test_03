@@ -1,102 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>GD Topbar</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Topbar container */
-.topbar {
-    background-color: red;
-    display: flex;
-    align-items: center;
-    padding: 0;
-    height: 50px;
-}
-
-/* Dropdown buttons */
-.dropdown {
-    position: relative;
-}
-
-.dropbtn {
-    background: red;
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.dropbtn:hover {
-    background: darkred;
-}
-
-/* Dropdown content */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: white;
-    min-width: 160px;
-    top: 50px; /* make it appear below the topbar */
-    left: 0;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background: #eee;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Right side links */
-.right-links {
-    margin-left: auto;
-    display: flex;
-}
-
-.right-links a {
-    color: white;
-    padding: 15px 20px;
-    text-decoration: none;
-}
-
-.right-links a:hover {
-    background: darkred;
-}
-</style>
-</head>
-<body>
-
 <div class="topbar">
-
-    <!-- Lists dropdown -->
     <div class="dropdown">
         <button class="dropbtn">Lists</button>
         <div class="dropdown-content">
             <a href="#">Main List</a>
             <a href="#">Extended List</a>
-            <a href="#">Legacy List</a>
         </div>
     </div>
 
-    <!-- Player Section dropdown -->
     <div class="dropdown">
         <button class="dropbtn">Player Section</button>
         <div class="dropdown-content">
@@ -105,13 +15,62 @@ body {
         </div>
     </div>
 
-    <!-- Right side links -->
     <div class="right-links">
         <a href="https://forms.google.com" target="_blank">Submit Record</a>
         <a href="https://discord.com" target="_blank">Discord</a>
     </div>
-
 </div>
 
-</body>
-</html>
+<style>
+.topbar {
+    background-color: red;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid black;
+}
+.dropdown {
+    position: relative;
+    margin-right: 20px;
+}
+.dropbtn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.dropbtn:hover { background: darkred; }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: white;
+    min-width: 150px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    z-index: 1001;
+}
+.dropdown-content a {
+    display: block;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+.dropdown-content a:hover { background-color: #eee; }
+.dropdown:hover .dropdown-content { display: block; }
+.right-links { margin-left: auto; }
+.right-links a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+}
+.right-links a:hover { background-color: darkred; }
+</style>
