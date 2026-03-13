@@ -1,0 +1,16 @@
+{
+"id": your id
+"name": Sky And Soul Layout
+"completion": link
+"verifier": CloverIsHere
+"list": 1
+ds=false
+"records": [
+        {
+            "user": "username",
+            "link": "link",
+            "percent": 100,
+            "hz": 60
+        }
+    ]
+}
